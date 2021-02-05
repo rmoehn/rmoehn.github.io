@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Richard&#39;s Status: Go to the source</title>
+    
+
+<meta name="description" content="SituationYou have found a Suspicious value and you wonder how it came about.">
+
+<meta property="og:description" content="SituationYou have found a Suspicious value and you wonder how it came about.">
+
+<meta property="og:url" content="https://www.richardmoehn.com/go-to-the-source/" />
+<meta property="og:title" content="Go to the source" />
+<meta property="og:type" content="article" />
+
+    <link rel="canonical" href="https://www.richardmoehn.com/go-to-the-source/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <link href="/css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Richard&#39;s Status</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about/">About</a>
+                </li>
+                
+                <li
+                >
+                <a href="/debugging-patterns/">Debugging Patterns</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Go to the source</h2>
+    </div>
+    
+    <h2 id="situation">Situation</h2><p>You have found a <a href="/suspicious-value">Suspicious value</a> and you wonder how it came about.</p><h2 id="approach">Approach</h2><p>Find the source code of the constructor or initializer of the suspicious value. Set a breakpoint there. Rerun the example. (If the value is a primitive value, it's more difficult to find out where it was generated.)</p><h2 id="example">Example</h2><p>In the Ruby on Rails example from <a href="/spot-the-differences">Spot the differences</a>, you found the <code>NullSession</code> to be suspicious. (It might be called <code>NullSessionHash</code> or similar. I'm lazy to reproduce it now, so stick with <code>NullSession</code>.) In RubyMine, you can open universal search with Shift-Shift, type in <code>NullSession</code> and hit Enter. This will take you to the <code>initialize</code> method, where you set a breakpoint</p><p>When you hit the breakpoint, nose around in the preceding code and the preceding stack frames. You find out that the CSRF token wasn't set. Voilà. Why was it not set? Because you switched from <code>jQuery.ajax</code> to <code>fetch</code> and forgot to adjust to the new tool. When debugging, <a href="/be-suspicious-of-new-tools">Be suspicious of new tools</a>.</p>
+
+    <div id="prev-next">
+        
+        <a href="/suspicious-value/">&laquo; Suspicious value</a>
+        
+        
+        ||
+        
+        
+        <a href="/be-suspicious-of-new-tools/">Be suspicious of new tools &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                <h3>Links</h3>
+                <ul id="links">
+                    <li><a href="http://cryogenweb.org/docs/home.html">Cryogen Docs</a></li>
+                    <li><a href="https://carmen.la/blog/archives/">Carmen's Blog</a></li>
+                    
+                    <li><a href="/reflow-markdown/">Reflow Markdown</a></li>
+                    
+                    <li><a href="/contact/">Contact</a></li>
+                    
+                    <li><a href="/reading-list/">Reading list</a></li>
+                    
+                    <li><a href="/useful/">Useful and composable</a></li>
+                    
+                    <li><a href="/results/">Results</a></li>
+                    
+                    <li><a href="/gb/">gb</a></li>
+                    
+                    <li><a href="/time-tracking/">Time tracking</a></li>
+                    
+                    <li><a href="/git-branch-naming-scheme/">Git branch naming scheme</a></li>
+                    
+                    <li><a href="/job-description/">Job description</a></li>
+                    
+                    <li><a href="/git-retire/">git retire</a></li>
+                    
+                    <li><a href="/map-clipboard-contents/">Map clipboard contents</a></li>
+                    
+                    <li><a href="/another-page/">Another Page</a></li>
+                    
+                    <li><a href="/spot-the-differences/">Spot the differences</a></li>
+                    
+                    <li><a href="/suspicious-value/">Suspicious value</a></li>
+                    
+                    <li><a href="/go-to-the-source/">Go to the source</a></li>
+                    
+                    <li><a href="/be-suspicious-of-new-tools/">Be suspicious of new tools</a></li>
+                    
+                </ul>
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/2016-01-07-docs/">Quick Start Guide</a></li>
+                        
+                        <li><a href="/2014-11-04-second-post/">Yet Another Post</a></li>
+                        
+                        <li><a href="/2014-03-10-first-post/">A Post</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags-output/cryogen/">cryogen</a></li>
+                        
+                        <li><a href="/tags-output/very fetch/">very fetch</a></li>
+                        
+                        <li><a href="/tags-output/not fetch/">not fetch</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy; 2021 Richard Möhn
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js" type="text/javascript"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>

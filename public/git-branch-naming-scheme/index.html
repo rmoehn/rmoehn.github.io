@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Richard&#39;s Status: Git branch naming scheme</title>
+    
+
+<meta name="description" content="Scheme:">
+
+<meta property="og:description" content="Scheme:">
+
+<meta property="og:url" content="https://www.richardmoehn.com/git-branch-naming-scheme/" />
+<meta property="og:title" content="Git branch naming scheme" />
+<meta property="og:type" content="article" />
+
+    <link rel="canonical" href="https://www.richardmoehn.com/git-branch-naming-scheme/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
+          type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <link href="/css/screen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Richard&#39;s Status</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li ><a href="/">Home</a></li>
+                <li
+                ><a href="/archives/">Archives</a></li>
+                
+                <li
+                >
+                <a href="/about/">About</a>
+                </li>
+                
+                <li
+                >
+                <a href="/debugging-patterns/">Debugging Patterns</a>
+                </li>
+                
+                <li><a href="/feed.xml">RSS</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+</nav>
+
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-lg-9">
+            <div id="content">
+                
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Git branch naming scheme</h2>
+    </div>
+    
+    <p>Scheme:</p><pre><code>{feature,fix,nonfimp}/-/-{explore,proposal}
+</code></pre><p>Example:</p><pre><code>fix/gt1648-make-tests-pass-under-karma/1-explore
+</code></pre><p>Advantages:</p><ul><li>The output of <code>git branch</code> stays neat, even when you work with many branches.</li><li>It will be easier for you to go back and see everything you explored for a certain ticket.</li><li>The numbered explore- and proposal-branches allow you to rebase and squash and edit freely while keeping other lines of exploration intact. Without this, you would have to dig through the <code>reflog</code> to undo a botched rebase.</li><li>As the branch name contains the issue number, it's easy for your colleagues to find the changes that belong to the in-progress tickets.</li><li>In general, when you push your feature branches to <code>origin</code> and your colleagues run <code>git fetch origin</code>, your branches show up in their branch autocompletion list. By using a common scheme, the contents of the autocompletion list will be predictable.</li></ul><p>Details:</p><ul><li>‘nonfimp’ stands for non-functional improvement. If you have a better short word for it, please suggest it in the comments.</li><li>I suggest that you make the fix/feature/nonfimp prefix mirror the labels you give tickets in your ticket tracker.</li><li>The ticket reference can be the issue number in Redmine, a board shortcut plus card number in Trello etc.</li><li><code>explore</code> is for branches where you're poking around. <code>proposal</code> is for when you make neat commits that you will <code>git-send</code> or open a pull request for.</li></ul><p>I suggest composing this with <a href="/git-retire">git retire</a>.</p>
+
+    <div id="prev-next">
+        
+        <a href="/time-tracking/">&laquo; Time tracking</a>
+        
+        
+        ||
+        
+        
+        <a href="/about/">About &raquo;</a>
+        
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div id="sidebar">
+                <h3>Links</h3>
+                <ul id="links">
+                    <li><a href="http://cryogenweb.org/docs/home.html">Cryogen Docs</a></li>
+                    <li><a href="https://carmen.la/blog/archives/">Carmen's Blog</a></li>
+                    
+                    <li><a href="/reflow-markdown/">Reflow Markdown</a></li>
+                    
+                    <li><a href="/contact/">Contact</a></li>
+                    
+                    <li><a href="/reading-list/">Reading list</a></li>
+                    
+                    <li><a href="/useful/">Useful and composable</a></li>
+                    
+                    <li><a href="/results/">Results</a></li>
+                    
+                    <li><a href="/gb/">gb</a></li>
+                    
+                    <li><a href="/time-tracking/">Time tracking</a></li>
+                    
+                    <li><a href="/git-branch-naming-scheme/">Git branch naming scheme</a></li>
+                    
+                    <li><a href="/job-description/">Job description</a></li>
+                    
+                    <li><a href="/git-retire/">git retire</a></li>
+                    
+                    <li><a href="/map-clipboard-contents/">Map clipboard contents</a></li>
+                    
+                    <li><a href="/another-page/">Another Page</a></li>
+                    
+                    <li><a href="/spot-the-differences/">Spot the differences</a></li>
+                    
+                    <li><a href="/suspicious-value/">Suspicious value</a></li>
+                    
+                    <li><a href="/go-to-the-source/">Go to the source</a></li>
+                    
+                    <li><a href="/be-suspicious-of-new-tools/">Be suspicious of new tools</a></li>
+                    
+                </ul>
+                
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/2016-01-07-docs/">Quick Start Guide</a></li>
+                        
+                        <li><a href="/2014-11-04-second-post/">Yet Another Post</a></li>
+                        
+                        <li><a href="/2014-03-10-first-post/">A Post</a></li>
+                        
+                    </ul>
+                </div>
+                
+                
+                <div id="tags">
+                    <h3>Tags</h3>
+                    <ul>
+                        
+                        <li><a href="/tags-output/cryogen/">cryogen</a></li>
+                        
+                        <li><a href="/tags-output/very fetch/">very fetch</a></li>
+                        
+                        <li><a href="/tags-output/not fetch/">not fetch</a></li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer>Copyright &copy; 2021 Richard Möhn
+        <p style="text-align: center;">Powered by <a href="http://cryogenweb.org">Cryogen</a></p></footer>
+</div>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="/js/highlight.pack.js" type="text/javascript"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+</body>
+</html>
