@@ -78,17 +78,17 @@
     
     <p>Scheme:</p><pre><code>{feature,fix,nonfimp}/-/-{explore,proposal}
 </code></pre><p>Example:</p><pre><code>fix/gt1648-make-tests-pass-under-karma/1-explore
-</code></pre><p>Advantages:</p><ul><li>The output of <code>git branch</code> stays neat, even when you work with many branches.</li><li>It will be easier for you to go back and see everything you explored for a certain ticket.</li><li>The numbered explore- and proposal-branches allow you to rebase and squash and edit freely while keeping other lines of exploration intact. Without this, you would have to dig through the <code>reflog</code> to undo a botched rebase.</li><li>As the branch name contains the issue number, it's easy for your colleagues to find the changes that belong to the in-progress tickets.</li><li>In general, when you push your feature branches to <code>origin</code> and your colleagues run <code>git fetch origin</code>, your branches show up in their branch autocompletion list. By using a common scheme, the contents of the autocompletion list will be predictable.</li></ul><p>Details:</p><ul><li>‘nonfimp’ stands for non-functional improvement. If you have a better short word for it, please suggest it in the comments.</li><li>I suggest that you make the fix/feature/nonfimp prefix mirror the labels you give tickets in your ticket tracker.</li><li>The ticket reference can be the issue number in Redmine, a board shortcut plus card number in Trello etc.</li><li><code>explore</code> is for branches where you're poking around. <code>proposal</code> is for when you make neat commits that you will <code>git-send</code> or open a pull request for.</li></ul><p>I suggest composing this with <a href="/git-retire">git retire</a>.</p>
+</code></pre><p>Advantages:</p><ul><li>The output of <code>git branch</code> stays neat, even when you work with many branches.</li><li>It will be easier for you to go back and see everything you explored for a certain ticket.</li><li>The numbered explore- and proposal-branches allow you to rebase and squash and edit freely while keeping other lines of exploration intact. Without this, you would have to dig through the <code>reflog</code> to undo a botched rebase.</li><li>As the branch name contains the issue number, it's easy for your colleagues to find the changes that belong to the in-progress tickets.</li><li>In general, when you push your feature branches to <code>origin</code> and your colleagues run <code>git fetch origin</code>, your branches show up in their branch autocompletion list. By using a common scheme, the contents of the autocompletion list will be predictable.</li></ul><p>Details:</p><ul><li>‘nonfimp’ stands for non-functional improvement. If you have a better short word for it, please let me know.</li><li>I suggest that you make the fix/feature/nonfimp prefix mirror the labels you give tickets in your ticket tracker.</li><li>The ticket reference can be the issue number in Redmine, a board shortcut plus card number in Trello etc.</li><li><code>explore</code> is for branches where you're poking around. <code>proposal</code> is for when you make neat commits that you will <code>git-send</code> or open a pull request for.</li></ul><p>I suggest composing this with <a href="/git-retire">git retire</a>.</p>
 
     <div id="prev-next">
         
-        <a href="/now/">&laquo; What I&#39;m doing now</a>
+        <a href="/git-retire/">&laquo; git retire</a>
         
         
         ||
         
         
-        <a href="/job-description/">Job description &raquo;</a>
+        <a href="/map-clipboard-contents/">Map clipboard contents &raquo;</a>
         
     </div>
 </div>
@@ -98,32 +98,20 @@
 
         <div class="col-md-3">
             <div id="sidebar">
-                <!--<h3>Links</h3>
+                Content in pages.<br/>
+                Changelog in <a href="/">posts</a>.<br/>
+                Subscribe via <a href="/feed.xml">RSS</a>.<br/>
+                <a href="/now">What I'm doing now.</a><br/>
+                Telegram style cool.
+                    <!--
+                <h3>Links</h3>
                 <ul id="links">
-                    <li><a href="http://cryogenweb.org/docs/home.html">Cryogen Docs</a></li>
+                    <li><a href="/now">What I'm doing now</a></li>
                     <li><a href="https://carmen.la/blog/archives/">Carmen's Blog</a></li>
                     
-                    <li><a href="/reflow-markdown/">Reflow Markdown</a></li>
-                    
-                    <li><a href="/reading-list/">Reading list</a></li>
-                    
-                    <li><a href="/results/">Results</a></li>
-                    
-                    <li><a href="/gb/">gb</a></li>
-                    
-                    <li><a href="/time-tracking/">Time tracking</a></li>
+                    <li><a href="/home/">Home</a></li>
                     
                     <li><a href="/now/">What I&#39;m doing now</a></li>
-                    
-                    <li><a href="/git-branch-naming-scheme/">Git branch naming scheme</a></li>
-                    
-                    <li><a href="/job-description/">Job description</a></li>
-                    
-                    <li><a href="/git-retire/">git retire</a></li>
-                    
-                    <li><a href="/map-clipboard-contents/">Map clipboard contents</a></li>
-                    
-                    <li><a href="/another-page/">Another Page</a></li>
                     
                     <li><a href="/spot-the-differences/">Spot the differences</a></li>
                     
@@ -133,8 +121,40 @@
                     
                     <li><a href="/be-suspicious-of-new-tools/">Be suspicious of new tools</a></li>
                     
-                </ul>-->
+                    <li><a href="/gb/">gb</a></li>
+                    
+                    <li><a href="/git-prevent-master-push/">Git: Prevent yourself from pushing to master</a></li>
+                    
+                    <li><a href="/git-retire/">git retire</a></li>
+                    
+                    <li><a href="/git-branch-naming-scheme/">Git branch naming scheme</a></li>
+                    
+                    <li><a href="/map-clipboard-contents/">Map clipboard contents</a></li>
+                    
+                    <li><a href="/reflow-markdown/">Reflow Markdown</a></li>
+                    
+                    <li><a href="/results/">Results</a></li>
+                    
+                    <li><a href="/job-description/">Job description</a></li>
+                    
+                    <li><a href="/time-tracking/">Time tracking</a></li>
+                    
+                    <li><a href="/reading-list/">Reading list</a></li>
+                    
+                </ul>
+                    -->
+                <!--
                 
+                <div id="recent">
+                    <h3>Recent Posts</h3>
+                    <ul>
+                        
+                        <li><a href="/2021-03-05-git-prevent-master-push/">Useful and composable: Git – Prevent yourself from pushing to master</a></li>
+                        
+                    </ul>
+                </div>
+                
+                -->
                 
             </div>
         </div>
