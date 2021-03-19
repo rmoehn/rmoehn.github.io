@@ -2,12 +2,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Richard&#39;s status</title>
+    <title>Richard&#39;s status: Use all the help available</title>
     
-    <meta name="description" content="What I&#39;ve found useful">
-    <meta name="keywords" content="">
-    
-    <link rel="canonical" href="https://www.richardmoehn.com">
+
+<meta name="description" content="printf is not the only debugging tool. It&#39;s useful when you&#39;re testing a
+hypothesis, and when you can repeatedly and rapidly reproduce the failure. An
+automatic test runner, such as Karma helps
+here. In JavaScript, console.trace complements console.log. Other languages
+have equivalents.Debuggers are great for exploration. They let you look up and down the
+stack. They make it cheap to peek at all manner of variables without cluttering
+the output. They allow you to Go to the source. They don&#39;t
+swallow type information the way stringification for printf does. It happened
+twice in one week that I spent fifteen minutes trying to find a bug in my Ruby
+code by running through it in my head. Each time I finally fired up
+Pry with
+pry-byebug and found the
+problem within a minute in a place I hadn&#39;t expected.">
+
+<meta property="og:description" content="printf is not the only debugging tool. It&#39;s useful when you&#39;re testing a
+hypothesis, and when you can repeatedly and rapidly reproduce the failure. An
+automatic test runner, such as Karma helps
+here. In JavaScript, console.trace complements console.log. Other languages
+have equivalents.Debuggers are great for exploration. They let you look up and down the
+stack. They make it cheap to peek at all manner of variables without cluttering
+the output. They allow you to Go to the source. They don&#39;t
+swallow type information the way stringification for printf does. It happened
+twice in one week that I spent fifteen minutes trying to find a bug in my Ruby
+code by running through it in my head. Each time I finally fired up
+Pry with
+pry-byebug and found the
+problem within a minute in a place I hadn&#39;t expected.">
+
+<meta property="og:url" content="https://www.richardmoehn.com/use-all-the-help-available/" />
+<meta property="og:title" content="Use all the help available" />
+<meta property="og:type" content="article" />
+
+    <link rel="canonical" href="https://www.richardmoehn.com/use-all-the-help-available/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -32,7 +62,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li  class="active" ><a href="/">Home</a></li>
+                <li ><a href="/">Home</a></li>
                 <!--<li
                     ><a href="/archives/">Archives</a></li>-->
                 
@@ -65,33 +95,53 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="post">
-    
-    <div class="post-header">
-        <h2>Debugging patterns: Use all the help available</h2>
-        <div id="post-meta">
-            
-            <div class="date">March 19, 2021</div>
-        </div>
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Use all the help available</h2>
     </div>
-    <p>See <a href="/use-all-the-help-available">Use all the help available</a>.</p>
-    <!--<a href="/2021-03-19-use-all-the-help-available/">Continue reading &#8594;</a>-->
-    <hr>
     
-    <div class="post-header">
-        <h2>Useful and composable: Git – Prevent yourself from pushing to master</h2>
-        <div id="post-meta">
-            
-            <div class="date">March 5, 2021</div>
-        </div>
-    </div>
-    <p>See <a href="/git-prevent-master-push">Git: Prevent yourself from pushing to master</a>.</p>
-    <!--<a href="/2021-03-05-git-prevent-master-push/">Continue reading &#8594;</a>-->
-    <hr>
-    
+    <p><strong><code>printf</code></strong> is not the only debugging tool. It's useful when you're testing a
+hypothesis, and when you can repeatedly and rapidly reproduce the failure. An
+automatic test runner, such as <a href="https://karma-runner.github.io/">Karma</a> helps
+here. In JavaScript, <code>console.trace</code> complements <code>console.log</code>. Other languages
+have equivalents.</p><p><strong>Debuggers</strong> are great for exploration. They let you look up and down the
+stack. They make it cheap to peek at all manner of variables without cluttering
+the output. They allow you to <a href="/go-to-the-source">Go to the source</a>. They don't
+swallow type information the way stringification for <code>printf</code> does. It happened
+twice in one week that I spent fifteen minutes trying to find a bug in my Ruby
+code by running through it in my head. Each time I finally fired up
+<a href="https://rmoehn.github.io/go-to-the-source/">Pry</a> with
+<a href="https://github.com/deivid-rodriguez/pry-byebug">pry-byebug</a> and found the
+problem within a minute in a place I hadn't expected.</p><p>The <strong>developer tools</strong> in the browser are known to everyone, I hope. I use the
+console, the network tab and the debugger all the time. Sometimes using the
+debugger appears to change the behaviour of the system. I haven't gotten to the
+bottom of this. In these cases, I have to fall back to <code>printf</code> and friends.</p><p><strong>Verbosity</strong> is similar to <code>printf</code>, but sometimes you can't get the
+information you need by adding <code>printf</code> to your own code. For example, there
+were two cases when I needed to know which test case was causing a hang or a
+certain warning. <code>printf</code> or a breakpoint didn't help, because I didn't know
+where to add them. The abovementioned Karma normally doesn't tell you which test
+it is running at any moment, but in debug mode it does. Minitest only gives you
+dots, but with
+<a href="https://github.com/minitest-reporters/minitest-reporters">minitest-reporters</a>
+it, too, logs the test names as it runs.</p><h2 id="summary">Summary</h2><p>There is a hurdle in front of everything but <code>printf</code>. Setting up the tool,
+learning the tool takes effort. But it's worth it. Once upon a time I tracked
+down an intermittent failure that had been bugging the team for two years. I did
+it by connecting Winpdb over SSH to a Python process running in a Docker
+container during a Jenkins build. As if this is not enough, the failure was
+occuring in Python code within a YAML file, where the debugger couldn't jump
+directly. So I had to devise a way to gingerly step through the interpreter of
+the YAML data without messing up the setup and having to restart. – Jump those
+hurdles.</p>
 
     <div id="prev-next">
         
+        <a href="/be-suspicious-of-new-tools/">&laquo; Be suspicious of new tools</a>
+        
+        
+        ||
+        
+        
+        <a href="/useful/">Useful and composable &raquo;</a>
         
     </div>
 </div>
