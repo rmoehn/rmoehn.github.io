@@ -76,9 +76,23 @@
         <h2>Git branch naming scheme</h2>
     </div>
     
-    <p>Scheme:</p><pre><code>{feature,fix,nonfimp}/-/-{explore,proposal}
-</code></pre><p>Example:</p><pre><code>fix/gt1648-make-tests-pass-under-karma/1-explore
-</code></pre><p>Advantages:</p><ul><li>The output of <code>git branch</code> stays neat, even when you work with many branches.</li><li>It will be easier for you to go back and see everything you explored for a certain ticket.</li><li>The numbered explore- and proposal-branches allow you to rebase and squash and edit freely while keeping other lines of exploration intact. Without this, you would have to dig through the <code>reflog</code> to undo a botched rebase.</li><li>As the branch name contains the issue number, it's easy for your colleagues to find the changes that belong to the in-progress tickets.</li><li>In general, when you push your feature branches to <code>origin</code> and your colleagues run <code>git fetch origin</code>, your branches show up in their branch autocompletion list. By using a common scheme, the contents of the autocompletion list will be predictable.</li></ul><p>Details:</p><ul><li>‘nonfimp’ stands for non-functional improvement. If you have a better short word for it, please let me know.</li><li>I suggest that you make the fix/feature/nonfimp prefix mirror the labels you give tickets in your ticket tracker.</li><li>The ticket reference can be the issue number in Redmine, a board shortcut plus card number in Trello etc.</li><li><code>explore</code> is for branches where you're poking around. <code>proposal</code> is for when you make neat commits that you will <code>git-send</code> or open a pull request for.</li></ul><p>I suggest composing this with <a href="/git-retire">git retire</a>.</p>
+    <p>Scheme:</p><pre><code class="text">&lt;your initials&gt;/&lt;ticket reference&gt;-&lt;description&gt;/&lt;number&gt;-{explore,proposal,…}
+</code></pre><p>Example:</p><pre><code class="text">rm/gt1648-make-tests-pass-under-karma/1-explore
+</code></pre><p>Advantages:</p><ul><li>The output of <code>git branch</code> stays neat, even when you work with many branches.</li><li>The initials allow you to identify your own branches. This is helpful, for
+example, when you use <a href="/git-retire">git retire</a> to keep the repo clean. You
+wouldn't want to delete your coworkers' branches.</li><li>It will be easier for you to go back and see everything you explored for a
+certain ticket.</li><li>The numbered explore- and proposal-branches allow you to rebase and squash and
+edit freely while keeping other lines of exploration intact. Without this, you
+would have to dig through the <code>reflog</code> to undo a botched rebase.</li><li>As the branch name contains the issue number, it's easy for your colleagues to
+find the changes that belong to the in-progress tickets.</li><li>In general, when you push your feature branches to <code>origin</code> and your
+colleagues run <code>git fetch origin</code>, your branches show up in their branch
+autocompletion list. By using a common scheme, the contents of the
+autocompletion list will be predictable.</li></ul><p>Details:</p><ul><li>If multiple contributors have the same initials, you'll have to find different
+shorthands.</li><li>The ticket reference can be the issue number in Redmine, a board shortcut plus
+card number in Trello etc.</li><li><code>explore</code> is for branches where you're poking around. <code>proposal</code> is for when
+you make neat commits that you will <code>git-send</code> or open a pull request for. You
+can use other labels, too, eg. <code>test</code>.</li><li>I used to recommend <code>fix</code>/<code>feature</code>/<code>nonfimp</code> instead of your initials as a
+prefix. That turned out to be less useful.</li></ul><p>I suggest composing this with <a href="/git-retire">git retire</a>.</p>
 
     <div id="prev-next">
         
@@ -148,6 +162,8 @@
                 <div id="recent">
                     <h3>Recent Posts</h3>
                     <ul>
+                        
+                        <li><a href="/2021-07-16-update-git-branch-naming-scheme/">Update Git branch naming scheme</a></li>
                         
                         <li><a href="/2021-03-19-use-all-the-help-available/">Debugging patterns: Use all the help available</a></li>
                         

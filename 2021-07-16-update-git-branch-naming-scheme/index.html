@@ -2,18 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Richard&#39;s status: Go to the source</title>
+    <title>Richard&#39;s status: Update Git branch naming scheme</title>
     
+<meta name="keywords" content="">
 
-<meta name="description" content="SituationYou have found a Suspicious value and you wonder how it came about.">
+<meta name="description" content="Recommend a more useful prefix. See Git branch naming
+scheme.">
 
-<meta property="og:description" content="SituationYou have found a Suspicious value and you wonder how it came about.">
+<meta property="og:description" content="Recommend a more useful prefix. See Git branch naming
+scheme.">
 
-<meta property="og:url" content="https://www.richardmoehn.com/go-to-the-source/" />
-<meta property="og:title" content="Go to the source" />
+<meta property="og:url" content="https://www.richardmoehn.com/2021-07-16-update-git-branch-naming-scheme/" />
+<meta property="og:title" content="Update Git branch naming scheme" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/go-to-the-source/">
+    <link rel="canonical" href="https://www.richardmoehn.com/2021-07-16-update-git-branch-naming-scheme/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -71,24 +74,31 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="custom-page">
-    <div id="page-header">
-        <h2>Go to the source</h2>
+<div id="post">
+    <div class="post-header">
+    <div id="post-meta" class="row">
+        <div class="col-lg-6">July 16, 2021</div>
+        
     </div>
+    <h2>Update Git branch naming scheme</h2>
+</div>
+<div>
     
-    <h2 id="situation">Situation</h2><p>You have found a <a href="/suspicious-value">Suspicious value</a> and you wonder how it came about.</p><h2 id="approach">Approach</h2><p>Find the source code of the constructor or initializer of the suspicious value. Set a breakpoint there. Rerun the example. (If the value is a primitive value, it's more difficult to find out where it was generated.)</p><h2 id="example">Example</h2><p>In the Ruby on Rails example from <a href="/spot-the-differences">Spot the differences</a>, you found the <code>NullSession</code> to be suspicious. (It might be called <code>NullSessionHash</code> or similar. I'm lazy to reproduce it now, so stick with <code>NullSession</code>.) In RubyMine, you can open universal search with Shift-Shift, type in <code>NullSession</code> and hit Enter. This will take you to the <code>initialize</code> method, where you set a breakpoint</p><p>When you hit the breakpoint, nose around in the preceding code and the preceding stack frames. You find out that the CSRF token wasn't set. Voilà. Why was it not set? Because you switched from <code>jQuery.ajax</code> to <code>fetch</code> and forgot to adjust to the new tool. When debugging, <a href="/be-suspicious-of-new-tools">Be suspicious of new tools</a>.</p>
+    <p>Recommend a more useful prefix. See <a href="/git-branch-naming-scheme">Git branch naming
+scheme</a>.</p>
+</div>
+
 
     <div id="prev-next">
         
-        <a href="/suspicious-value/">&laquo; Suspicious value</a>
         
-        
-        ||
-        
-        
-        <a href="/be-suspicious-of-new-tools/">Be suspicious of new tools &raquo;</a>
+        <a class="right" href="/2021-03-19-use-all-the-help-available/">Debugging patterns: Use all the help available &raquo;</a>
         
     </div>
+
+    
+
+
 </div>
 
             </div>
