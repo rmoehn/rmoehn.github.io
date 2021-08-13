@@ -12,9 +12,8 @@
     ga('create', 'UA-204780495-1', 'rmoehn.github.io');
 
     console.log("referrer", document.referrer);
-    ga('set', 'transport', 'beacon');
     if (!document.referrer.startsWith("https://www.guidedtrack.com")
-            && new URLSearchParams(location.search).get("__gt_embed") !== null) {
+            && new URLSearchParams(location.search).get("__gt_embed") === null) {
         ga('send', 'pageview', {transport: 'beacon'});
     }
     </script>
