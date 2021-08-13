@@ -13,13 +13,13 @@
 
     console.log("referrer", document.referrer);
     ga('set', 'transport', 'beacon');
-    if (!document.referrer.startsWith("https://www.guidedtrack.com")) {
+    if (!document.referrer.startsWith("https://www.guidedtrack.com")
+            && new URLSearchParams(location.search).get("__gt_embed") !== null) {
         ga('send', 'pageview', {transport: 'beacon'});
     }
     </script>
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
-
 
     <!-- Skip this line if you're already using jQuery -->
     <script src="https://www.guidedtrack.com/assets/jquery_gt.js"></script>
