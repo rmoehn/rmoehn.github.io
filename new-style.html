@@ -5,19 +5,20 @@
 
     <!-- Google Analytics -->
     <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-43923508-2', {'siteSpeedSampleRate': 100}, 'clearerthinking.org');
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-204780495-1', 'rmoehn.github.io');
+    //ga('create', 'UA-43923508-2', {'siteSpeedSampleRate': 100}, 'clearerthinking.org');
 
-      if (!document.referrer.startsWith("https://www.guidedtrack.com")
-              && new URLSearchParams(location.search).get("__gt_embed") === null) {
-          ga('send', 'pageview',{transport: 'beacon'});
-      }
-      </script>
+    if (!document.referrer.startsWith("https://www.guidedtrack.com")
+            && new URLSearchParams(location.search).get("__gt_embed") === null) {
+        ga('send', 'pageview',{transport: 'beacon'});
+    }
+    </script>
+    <!-- <script src='http://localhost:27272'></script> -->
     <script src='https://www.google-analytics.com/analytics.js'></script>
+
+    <script src='http://localhost:8000/redirect.js'></script>
     <!-- End Google Analytics -->
-
-
-    <script src="http://localhost:8000/redirect.js"></script> -->
 
     <!-- Skip this line if you're already using jQuery -->
     <!-- <script src="https://www.guidedtrack.com/assets/jquery_gt.js"></script> -->
@@ -30,7 +31,7 @@
     <!-- <!-1- Skip this line if you're already using Bootstrap CSS -1-> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://www.guidedtrack.com/assets/bootstrap.css"> -->
 
-    <!-- <link rel="stylesheet" type="text/css" href="https://www.guidedtrack.com/assets/guidedtrack.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://www.guidedtrack.com/assets/guidedtrack.css">
 
     <title>New-style embedded program</title>
   </head>
