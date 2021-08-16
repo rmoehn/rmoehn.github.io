@@ -1,0 +1,53 @@
+<!-- vim: set shiftwidth=2: -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    console.log('referrer', document.referrer);
+    <!-- Google Analytics -->
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-204780495-1', 'rmoehn.github.io');
+    //ga('create', 'UA-43923508-2', {'siteSpeedSampleRate': 100}, 'clearerthinking.org');
+
+    //if (!document.referrer.startsWith("https://localhost:3000")
+    //    && new URLSearchParams(location.search).get("__gt_embed") === null) {
+      ga('send', 'pageview', {transport: 'beacon'});
+    //}
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <!-- Skip this line if you're already using jQuery -->
+    <script src="https://localhost:3000/assets/jquery_gt.js"></script>
+
+    <!-- Skip this line if you're already using Bootstrap JS -->
+    <script src="https://localhost:3000/assets/bootstrap.min.js"></script>
+
+    <script src="https://localhost:3000/assets/gt_interpreter.js"></script>
+
+    <!-- Skip this line if you're already using Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="https://localhost:3000/assets/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" href="https://localhost:3000/assets/guidedtrack.css">
+
+    <title>New-style embedded program</title>
+  </head>
+
+  <body>
+    <div aria-live="polite" class="guidedtrack program_container" data-environment="development" data-mode="" id="10cewz7">
+  <div id="program_navigation">
+    <div id="back-button"></div>
+    <div class="navigation_container"></div>
+    <div id="run-menu"></div>
+    <div class="points">
+      <div class="total"></div>
+      <div class="change"></div>
+    </div>
+  </div>
+  <div class="maintain"></div>
+  <div class="main"></div>
+</div>
+  </body>
+</html>
