@@ -9,13 +9,13 @@
     console.log('referrer', document.referrer);
     window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-204780495-1', 'rmoehn.github.io');
-    //ga('create', 'UA-43923508-2', {'siteSpeedSampleRate': 100}, 'clearerthinking.org');
 
-    //if (!document.referrer.startsWith("https://localhost:3000")
-    //    && new URLSearchParams(location.search).get("__gt_embed") === null) {
+    window.gt_redirects_done_callback = function(original_referrer) {
+      ga('set', 'referrer', original_referrer);
       ga('send', 'pageview', {transport: 'beacon'});
-    //}
+    }
     </script>
+
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <!-- End Google Analytics -->
 
