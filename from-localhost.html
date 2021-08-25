@@ -10,11 +10,14 @@
     ga('create', 'UA-204780495-1', 'rmoehn.github.io');
     //ga('create', 'UA-43923508-2', {'siteSpeedSampleRate': 100}, 'clearerthinking.org');
 
-    window.gt_redirects_done_callback = function(original_referrer) {
-      ga('set', 'location', window.location.href);
-      ga('set', 'referrer', original_referrer);
-      ga('send', 'pageview');
-    }
+    window.addEventListener(
+      'guidedtrack:redirects:done',
+      function (event) {
+        ga('set', 'location', window.location.href);
+        ga('set', 'referrer', event.detail.original_referrer);
+        ga('send', 'pageview');
+      }
+    );
     </script>
 
     <script async src='https://www.google-analytics.com/analytics.js'></script>
