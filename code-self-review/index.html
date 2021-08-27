@@ -2,21 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Richard&#39;s status: Update Git branch naming scheme</title>
+    <title>Richard&#39;s status: Code self-review</title>
     
-<meta name="keywords" content="">
 
-<meta name="description" content="Recommend a more useful prefix. See Git branch naming
-scheme.">
+<meta name="description" content="SituationYou&#39;ve tentatively finished a chunk of work and you&#39;re intending to submit a PR.
+(Or to push your changes to any other place where they are going to be conveyed
+to production.)">
 
-<meta property="og:description" content="Recommend a more useful prefix. See Git branch naming
-scheme.">
+<meta property="og:description" content="SituationYou&#39;ve tentatively finished a chunk of work and you&#39;re intending to submit a PR.
+(Or to push your changes to any other place where they are going to be conveyed
+to production.)">
 
-<meta property="og:url" content="https://www.richardmoehn.com/2021-07-16-update-git-branch-naming-scheme/" />
-<meta property="og:title" content="Update Git branch naming scheme" />
+<meta property="og:url" content="https://www.richardmoehn.com/code-self-review/" />
+<meta property="og:title" content="Code self-review" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/2021-07-16-update-git-branch-naming-scheme/">
+    <link rel="canonical" href="https://www.richardmoehn.com/code-self-review/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -74,33 +75,83 @@ scheme.">
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="post">
-    <div class="post-header">
-    <div id="post-meta" class="row">
-        <div class="col-lg-6">July 16, 2021</div>
-        
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Code self-review</h2>
     </div>
-    <h2>Update Git branch naming scheme</h2>
-</div>
-<div>
     
-    <p>Recommend a more useful prefix. See <a href="/git-branch-naming-scheme">Git branch naming
-scheme</a>.</p>
-</div>
+    <h2 id="situation">Situation</h2><p>You've tentatively finished a chunk of work and you're intending to submit a PR.
+(Or to push your changes to any other place where they are going to be conveyed
+to production.)</p><h2 id="approach">Approach</h2><p>Review your own changes using <code>git difftool</code> (or any other side-by-side change
+viewing mechanism). To reduce author's blindness, make your changes look
+unfamiliar by changing font, colours and, if possible, the screen you're viewing
+them on.</p><p>The same idea applies to reviewing other kinds of work. For example, when you
+write a document in Markdown, proofread the rendered page in the browser, not
+the original Markdown.</p><h2 id="rationale">Rationale</h2><p>Why would you review your own code before submitting it for review by others?
+Because it's a tighter feedback loop. Tighter feedback loops make everything
+faster. And it saves others' time if they don't have to point out problems that
+you could have found yourself.</p><p>I haven't looked for data on author's blindness and how much it can be reduced
+by changing colours, font etc. I've only heard anecdotes. You'll have to see
+whether it makes a difference for you.</p><h2 id="example">Example</h2><p>This is specific to how I work. You'll have to find an equivalent that works
+with your tools. All of this is intended to make the code look as different as
+possible, while staying easy to read.</p><table><thead><tr><th style="width: 20%;"></th><th style="width: 40%;">Writing code</th><th style="width: 40%;">Reviewing code</th></tr></thead><tbody><tr><th scope="row">
+    screen
+    </th><td>
+    normal pixel density, large external display
+    </td><td>
+    MacBook Retina Display
+    </td></tr><tr><th scope="row">
+    font
+    </th><td>
+    12 pt JetBrains Mono
+    </td><td>
+    15 pt Courier
+    </td></tr><tr><th scope="row">
+    viewing mode
+    </th><td>
+    normal Vim
+    </td><td>
+    Vim in diff mode
+    </td></tr><tr><th scope="row">
+    colorscheme
+    </th><td>
+    Vim light background <code>default</code></td><td><code>github</code> (from <a href="(https://github.com/cormacrelf/vim-colors-github)">GitHub: cormacrelf/vim-colors-github</a>)
+    </td></tr></tbody></table><ul><li><p><a href="https://github.com/dandavison/delta"><code>delta</code></a> is great for viewing diffs. I
+use it in unified mode for <code>git diff</code>. For self-reviews I still use Vimdiff
+because I want the output to look different from everyday <code>git diff</code> output.
+You could write glue code to make <code>delta</code> work for both purposes.</p></li><li><p>I've tried side-by-side difftools other than Vimdiff and <code>delta</code>, but, at
+least on Mac, they all sucked.</p></li><li><p>15 pt is the size that allows a text width of about ninety characters Courier
+in side-by-side view on my laptop display. I have an iTerm2 shortcut for
+switching to this ‘Diff’ profile.</p></li><li><p>Here are my Vim settings, which are activated automatically in diff mode:</p><pre><code class="vim">" Credits:
+" - https://stackoverflow.com/a/17183382/5091738
+" - https://vi.stackexchange.com/a/10898/19694
+" - https://www.reddit.com/r/vim/comments/2mfg88/color_scheme_for_vimdiff/cm3rau0/
+" - http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim?file=Xterm-color-table.png
+" - https://github.com/endel/vim-github-colorscheme
 
+if &amp;diff
+    set number
+    set norelativenumber
+    set diffopt+=iwhite
+    colorscheme github
+    highlight DiffAdd    cterm=none ctermbg=194
+    highlight DiffChange cterm=none ctermbg=255
+    highlight DiffText cterm=none ctermbg=189
+    highlight DiffDelete cterm=none ctermbg=224
+endif
+</code></pre></li></ul>
 
     <div id="prev-next">
         
-        <a href="/2021-08-06-write-to-chip-salzenberg/">&laquo; Debugging patterns: Write to Chip Salzenberg</a>
+        <a href="/git-branch-naming-scheme/">&laquo; Git branch naming scheme</a>
         
         
-        <a class="right" href="/2021-03-19-use-all-the-help-available/">Debugging patterns: Use all the help available &raquo;</a>
+        ||
+        
+        
+        <a href="/map-clipboard-contents/">Map clipboard contents &raquo;</a>
         
     </div>
-
-    
-
-
 </div>
 
             </div>
