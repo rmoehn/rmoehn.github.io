@@ -2,18 +2,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Richard&#39;s status: Useful and composable</title>
+    <title>Richard&#39;s status: Per-issue directories</title>
     
 
-<meta name="description" content="Git">
+<meta name="description" content="SituationYou&#39;re tracking work in an issue tracking system, such as Redmine, FogBugz or
+Trello. While working on an issue, you want to save notes or supporting files on
+your computer.">
 
-<meta property="og:description" content="Git">
+<meta property="og:description" content="SituationYou&#39;re tracking work in an issue tracking system, such as Redmine, FogBugz or
+Trello. While working on an issue, you want to save notes or supporting files on
+your computer.">
 
-<meta property="og:url" content="https://www.richardmoehn.com/useful/" />
-<meta property="og:title" content="Useful and composable" />
+<meta property="og:url" content="https://www.richardmoehn.com/per-issue-directories/" />
+<meta property="og:title" content="Per-issue directories" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/useful/">
+    <link rel="canonical" href="https://www.richardmoehn.com/per-issue-directories/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -48,7 +52,7 @@
                 </li>
                 
                 <li
-                 class="active" >
+                >
                 <a href="/useful/">Useful and composable</a>
                 </li>
                 
@@ -73,20 +77,46 @@
                 
 <div id="custom-page">
     <div id="page-header">
-        <h2>Useful and composable</h2>
+        <h2>Per-issue directories</h2>
     </div>
     
-    <h2 id="git">Git</h2><ul><li><a href="/gb">gb</a></li><li><a href="/git-prevent-master-push">Git: Prevent yourself from pushing to master</a></li><li><a href="/git-retire">git retire</a></li><li><a href="/git-branch-naming-scheme">Git branch naming scheme</a></li></ul><h2 id="software-development">Software development</h2><ul><li><a href="/code-self-review">Code self-review</a></li><li><a href="/per-issue-directories">Per-issue directories</a></li></ul><h2 id="other">Other</h2><ul><li><a href="/map-clipboard-contents">Map clipboard contents</a></li><li><a href="/reflow-markdown">Reflow Markdown</a></li></ul>
+    <h2 id="situation">Situation</h2><p>You're tracking work in an issue tracking system, such as Redmine, FogBugz or
+Trello. While working on an issue, you want to save notes or supporting files on
+your computer.</p><h2 id="approach">Approach</h2><p>Create one directory for each issue you're working on, named like this:</p><pre><code class="text">&lt;lowercase area code&gt;&lt;issue number&gt;-&lt;brief description&gt;
+</code></pre><h2 id="examples">Examples</h2><pre><code class="text">gt1773-purchase-status
+gt1816-threat-modelling
+gt1822-stream-csv
+gt1824-rake-add-schema
+gt1835-incomplete-deletion
+gt1841-fast-json
+gt1843-search-bar-shortcut
+</code></pre><p>Here, ‘gt’ indicates that these are related to cards on the
+<a href="https://www.guidedtrack.com/">GuidedTrack</a> Trello board. The number is the
+Trello card number.</p><h2 id="rationale">Rationale</h2><p>It's a tiny moment of discipline that allows you to be sloppy the rest of the
+time. The discipline is that you have to create the directory. The sloppiness is
+that thereafter you don't have to think where to put a file – it's obvious – and
+how to name it – it doesn't matter, since the directory provides enough context.</p><p>Further advantages:</p><ul><li>Keeping one workspace per issue makes task switching easier. Compare with the
+situation where you have one workspace for everything: Either you cause
+friction by mixing everything up. Or you have high switching costs because you
+have to clean up everytime.</li><li>When you want to look back, it's easy to find all the information related to a
+certain issue.</li><li>The brief description allows you to know what the directory is about without
+having to look up the number in the issue tracking system. I used to name the
+directories only with the issue number, but then I was faced with an <code>ls</code>
+output like <code>4725 4875 4878 4955 4985</code> and after two months I had no idea what
+this was about.</li><li>The area code makes the directory name prefix globally unique. Now you can
+type ‘gt1816’ into your desktop search tool and it produces the exactly right
+result.</li><li>The area code being lowercase makes it easy to type. Pedantic as I am, I used
+to use uppercase, but then I had to hold the Shift key while typing.</li></ul><h2 id="see-also">See also</h2><p><a href="/git-branch-naming-scheme">Git branch naming scheme</a></p>
 
     <div id="prev-next">
         
-        <a href="/write-to-chip-salzenberg/">&laquo; Write to Chip Salzenberg</a>
+        <a href="/code-self-review/">&laquo; Code self-review</a>
         
         
         ||
         
         
-        <a href="/gb/">gb &raquo;</a>
+        <a href="/map-clipboard-contents/">Map clipboard contents &raquo;</a>
         
     </div>
 </div>
