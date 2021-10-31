@@ -79,9 +79,26 @@ body {
     font-size: 100%;
 }
 
-#content blockquote.military {
+#content .military {
     font-family: Courier, Courier New, monospace;
+    hyphens: auto;
 }
+
+#content h3.military {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Futura", "Century Gothic", "URW Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+#content h4.military {
+    text-align: center;
+    font-family: "Futura", "Century Gothic", "URW Gothic", sans-serif;
+    font-weight: bold;
+    font-size: 100%;
+}
+
 
 footer {
     font-size: 14px;
