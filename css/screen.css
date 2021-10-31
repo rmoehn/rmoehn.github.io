@@ -75,6 +75,14 @@ body {
     height: auto;
 }
 
+#content blockquote {
+    font-size: 100%;
+}
+
+#content blockquote.military {
+    font-family: Courier, Courier New, monospace;
+}
+
 footer {
     font-size: 14px;
     text-align: center;
