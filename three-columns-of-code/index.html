@@ -2,19 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Little Pluses: Useful and composable: Git – Prevent yourself from pushing to master</title>
+    <title>Little Pluses: Three columns of code</title>
     
-<meta name="keywords" content="">
 
-<meta name="description" content="See Git: Prevent yourself from pushing to master.">
-
-<meta property="og:description" content="See Git: Prevent yourself from pushing to master.">
-
-<meta property="og:url" content="https://www.richardmoehn.com/2021-03-05-git-prevent-master-push/" />
-<meta property="og:title" content="Useful and composable: Git – Prevent yourself from pushing to master" />
+<meta property="og:url" content="https://www.richardmoehn.com/three-columns-of-code/" />
+<meta property="og:title" content="Three columns of code" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/2021-03-05-git-prevent-master-push/">
+    <link rel="canonical" href="https://www.richardmoehn.com/three-columns-of-code/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -77,30 +72,73 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="post">
-    <div class="post-header">
-    <div id="post-meta" class="row">
-        <div class="col-lg-6">March 5, 2021</div>
-        
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Three columns of code</h2>
     </div>
-    <h2>Useful and composable: Git – Prevent yourself from pushing to master</h2>
-</div>
-<div>
     
-    <p>See <a href="/git-prevent-master-push">Git: Prevent yourself from pushing to master</a>.</p>
-</div>
-
+    <pre><code class="text">┌──────┬──────┬──────┐
+│ code │ code │ code │
+│      │      │      │
+│      │      │      │
+│      │      │      │
+│      │      │      │
+└──────┴──────┴──────┘
+</code></pre><br /><p><strong>Use a setup where you can have three columns of code in your main code
+editing environment.</strong></p><p>This is a personal observation. There are people who like to program
+with just a thirteen inch laptop screen and they might have a point. But
+going from two columns to three columns reduced the brain crunch
+I feel when working with complicated code. And do you really think you
+have a better chance understanding a big complicated codebase when you
+have to jump from file to file to browser to log output and back to file
+while keeping the context in your working memory? Human brains are
+limited. Put it all in front of you and start <em>working</em>.</p><p>For years my main code editing environment was a big terminal window on a big
+external monitor arranged like this:</p><pre><code class="text">┌──────┬──────┬──────┐
+│ code │ code │ bash │
+│      │      │      │
+│      │      ├──────┤
+│      │      │ bash │
+│      │      │      │
+└──────┴──────┴──────┘
+</code></pre><p>This isn't as good as three columns because I often end up working on two files
+and need context from one. Or I work with one file and need context from two.
+Previously I would switch between files, or split one or two of the panes. But
+that gave me headaches.</p><p>You might ask why I don't write simple code so that I don't need to look at many
+things at once. I do strive to write simple code. But most of the time I'm not
+working with code that I have written. In fact, I've ended up spending most of
+my career so far trying to wrap my head around big complicated codebases that
+others had produced. It's what most programmers do most of the time, I assume.</p><p>One column of code was added – where did the Bash instances go? To another
+(small) external monitor. Here is the complete picture (the exact contents of
+the monitors vary):</p><pre><code class="text">┌───────┐┌──────┬──────┬──────┐┌─────────┐
+│ bash  ││ code │ code │ code ││ browser │
+├───────┤│      │      │      ││         │
+│ bash  ││      │      │      │└─────────┘
+└───────┘│      │      │      │
+         │      │      │      │
+         └──────┴──────┴──────┘
+</code></pre><p>You might worry about the added geekiness, energy cost and heat output. The
+geekiness can't be helped. Energy and heat shouldn't be a problem. – My small,
+old monitor stays much cooler than my main monitor. – And if you're working on
+making the world better (→ <a href="https://80000hours.org/">80,000 Hours</a>), your
+increased productivity will more than make up for the increased cost.</p><p>Some people (→ <a href="https://tonsky.me/blog/monitors/">tonsky.me: Time to upgrade your
+monitor</a>) recommend 4K monitors for
+programming. As a sidecar, I found a 17" old school monitor good enough. Three
+points about this:</p><ul><li>Don't bother with height-adjustability; put it on a stack of books.</li><li>17"@1280x1024 is the minimum. Slightly bigger/higher resolution would be nice.
+My main monitor has 109 ppi, which is adequate.</li><li>For MacBooks with only USB-C/DisplayPort: Use external monitors with a
+DisplayPort jack. HDMI adaptors suck, in my experience. They get super hot.
+And when I plug/unplug anything, the monitors turn off and on again.</li></ul>
 
     <div id="prev-next">
         
-        <a href="/2021-03-19-use-all-the-help-available/">&laquo; Debugging patterns: Use all the help available</a>
+        <a href="/disable-github-notification-dot/">&laquo; Disable the GitHub notification dot</a>
         
+        
+        ||
+        
+        
+        <a href="/map-clipboard-contents/">Map clipboard contents &raquo;</a>
         
     </div>
-
-    
-
-
 </div>
 
             </div>
