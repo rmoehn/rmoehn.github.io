@@ -2,18 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Little Pluses: git retire</title>
+    <title>Little Pluses: Three columns of code</title>
     
 
-<meta name="description" content="When I don&#39;t need a branch anymore, I move it to archive/ and delete it from the central repo using a crude alias. ~/.gitconfig:">
-
-<meta property="og:description" content="When I don&#39;t need a branch anymore, I move it to archive/ and delete it from the central repo using a crude alias. ~/.gitconfig:">
-
-<meta property="og:url" content="https://www.richardmoehn.com/git-retire/" />
-<meta property="og:title" content="git retire" />
+<meta property="og:url" content="https://www.richardmoehn.com/reading-grokking-simplicity/" />
+<meta property="og:title" content="Three columns of code" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/git-retire/">
+    <link rel="canonical" href="https://www.richardmoehn.com/reading-grokking-simplicity/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -78,30 +74,20 @@
                 
 <div id="custom-page">
     <div id="page-header">
-        <h2>git retire</h2>
+        <h2>Three columns of code</h2>
     </div>
     
-    <p>When I don't need a branch anymore, I move it to <code>archive/</code> and delete it from the central repo using a crude alias. <code>~/.gitconfig</code>:</p><pre><code>…
-[alias]
-    …
-    retire = !sh -c 'git branch --move $1 archive/$1 &amp;amp;&amp;amp; git push --delete origin $1' -
-…
-</code></pre><p>Ways to compose it:</p><ul><li><p>If you use a <a href="/git-branch-naming-scheme/">branch naming scheme</a>, you might want to retire multiple branches in a row. Say, <code>git branch</code> prints this:</p><pre><code>…
-feature/12-repair-bicycle/1-explore
-feature/12-repair-bicycle/2-explore
-feature/12-repair-bicycle/3-proposal
-…
-</code></pre><p>You can select and copy them, then run <code>pbpaste |xargs -n1 git retire</code> to retire them all. Substitute <code>pbpaste</code> with whatever prints the clipboard contents to STDOUT.</p></li><li><p><a href="/gb">gb</a></p></li></ul><p>Ways to make it better:</p><ul><li>Don't try to delete branches that aren't on <code>origin</code>.</li><li>Don't hardcode the remote. – Maybe delete the branch from all remotes?</li></ul>
+    
 
     <div id="prev-next">
         
-        <a href="/git-prevent-master-push/">&laquo; Git: Prevent yourself from pushing to master</a>
+        <a href="/disable-github-notification-dot/">&laquo; Disable the GitHub notification dot</a>
         
         
         ||
         
         
-        <a href="/git-branch-naming-scheme/">Git branch naming scheme &raquo;</a>
+        <a href="/three-columns-of-code/">Three columns of code &raquo;</a>
         
     </div>
 </div>
