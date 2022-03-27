@@ -82,7 +82,35 @@
     </div>
     
     <p>WORK IN PROGRESS</p><h2 id="situation">Situation</h2><p>You are a software developer.</p><h2 id="approach">Approach</h2><p>Read the book <a href="https://grokkingsimplicity.com/">Grokking Simplicity by Eric
-Normand</a>.</p><h2 id="rationale">Rationale</h2><p>It contains all the things I wish every programmer knew but few do. It contains
+Normand</a>.</p><h2 id="rationale">Rationale</h2><p>I tried to write up a beautiful argument on why Grokking Simplicity is better
+than The Pragmatic Programmer, Clean Code, TDD and all the other stuff on how to
+program better. And how the latter books miss the point. But that would be
+controversial and hard and I just don't have the time. So I'll give you a
+disjointed list of thoughts. And hope that you have enough confidence in me that
+you pick up the book and give it a shot.</p><ul><li><p>When I look at the code of others, the greatest problems with it stem from not
+applying the principles in Grokking Simplicity.</p></li><li><p>Oh no, the book is almost 600 pages long! Yes, but it's not that dense. There
+are many pictures and repeated examples. And the more advanced you are, the
+more you can skip. It's not the kind of book where you skip one exercise and
+completely lose track.</p></li><li><p>I don't know whether the book will be compelling to someone who
+doesn't already know its contents. This is a strange statement. The fact is
+that I had learned many of the things in the book over time and from various
+places. This limits my ability to judge whether someone new to them could
+learn them from the book. I certainly hope so, because it would be tough to
+persuade people to work through a long list of podcast episodes, blog posts
+and presentations.</p></li><li><p>After you get a few chapters in, you might start to wonder: ‘This is all nice
+and good, but I'm stuck at work with this codebase that doesn't follow those
+principles.’ – Read the last chapter. It will give you some ideas.</p></li><li><p>Growing a language is a skill that I consider very important and which is
+taught in the book, but not in enough detail.</p><p>– I had learned them from the old presentation When
+Code Cries, from Eric's podcast and newsletter, from Paul Graham's TK, from
+Guy Steele TK etc. – And I didn't know any condensed source to point people
+to. When I read Grokking Simplicity, I recognized it as the thing I was
+looking for. And I hope that it will do for others what the scattered sources
+did for me.</p></li></ul><p>When you start wondering, ‘This is all nice and good, but how do I apply this in
+X codebase, which doesn't follow these principles?’, read the last chapter. Cf.
+Andri.</p><p>It's a big book, but much of it is examples … not like a dense 500 page book.</p><p>Then read:</p><ul><li>Paul Graham's TK</li><li>Guy Steele's TK
+└ The book contains the ideas behind these. But these provide another angle,
+which I find useful.</li><li>Cite especially the section from Steele about deciding to not add certain
+things to the language. And about making the words not too long.</li></ul><h2 id="rationale-1">Rationale</h2><p>It contains all the things I wish every programmer knew but few do. It contains
 the essence of writing good code. For sure, there are many more things to learn.
 But this is the core. It's the core that many books and concepts like The
 Pragmatic Programmer or Clean Code or TDD aim at and miss because they haven't
@@ -98,7 +126,49 @@ etc. – And I didn't know any condensed source to point people to. When I read
 Grokking Simplicity, I recognized it as the thing I was looking for. And I hope
 that it will do for others what the scattered sources did for me.</p><p>By the way, the Paul Graham thing and Guy Steele thing are worth
 reading/watching in addition to the book. They give a slightly different
-perspective on stratified design.</p>
+perspective on stratified design.</p><p>The next step after learning to program is learning to program well. For this
+you will find a number of classic guides. Unfortunately, many of them miss the
+core of programming well. Fortunately, there is one book, <a href="https://grokkingsimplicity.com/">Grokking Simplicity
+by Eric Normand</a>, which hits it. At least as
+best I can judge from my level of programming skill.</p><p>Why do I think so?</p><p>What is the catch?</p><p>What then?</p><p>Many have learned programming to the point where they understand <code>if</code> and <code>for</code>
+and function calls, and can make the computer do what they want. Few know how to
+structure code so that it is easy to work with, over time and at large scale.
+How can you learn to structure code well? For a start, I suggest a book, an
+essay and a talk, in this order.</p><h2 id="grokking-simplicity">Grokking Simplicity</h2><p><a href="https://grokkingsimplicity.com/">Grokking Simplicity by Eric Normand</a> teaches
+all the things I wish every programmer knew, but few do. At least judging from
+the code I've seen. Other sources, such as The Pragmatic Programmer, Refactoring
+or TDD try to teach these, too, but they don't hit the heart of the matter.
+Instead they focus on heuristics like function length and proxies like
+testability. Grokking Simplicity hits the heart of the matter.</p><p>It is almost 600 pages long, but those are not the heavy pages of Skiena's to
+Algorithm Design Manual. Rather, they are light pages with many pictures and
+repeated examples. And the more advanced you are, the faster you can move. It's
+not the kind of book where you skip one exercise and completely lose track.</p><p>Finally, you can start applying what you learn from this book in any existing
+codebase. No rewrite from scratch required. If you wonder how as you start
+reading, I suggest reading the last chapter first. It will tell you.</p><h2 id="programming-bottom-up-and-growing-a-language">Programming Bottom-Up and Growing a Language</h2><p>Growing a language is a skill that I consider very important and which is taught
+in Grokking Simplicity. But in my experience, two more things are required to
+make it stick: Read <a href="http://paulgraham.com/progbot.html">Programming Bottom-Up by Paul
+Graham</a>. And watch or read enough of
+<a href="https://www.youtube.com/watch?v=_ahvzDzKdB0">Growing a Language by Guy Steele
+(YouTube)</a> to get the point. (If
+you have the time, I recommend you watch or read it all.) I'm lazy to argue why
+these are the things to read/watch. They are short enough to speak for
+themselves. But I'll leave you with a thought from Growing a Language, which
+might otherwise be overlooked:</p><blockquote><p>I had to take time to think through how to phrase each thought. And there was
+this choice for each new word: is it worth the work to define it, or should I
+just stick with the words I have? Should I do the work of defining a new word
+such as mirror, or should I just say “looking glass” each time I want to speak
+of one? (As an example, I was tempted more than once to state the “ly” rule
+for making new words that change what verbs mean, but in the end I chose to
+cast all such words to one side and make do. And I came that close to defining
+the word without, but each time, for better or for worse, I found some other
+way to phrase my thought.)</p><p>I learned in my youth […] that it is better to choose short words when I can.
+[…] I should try to make my thoughts clear; if they are clear and right, then
+other persons can judge my work as it ought to be judged.</p><p>[…] Short words work well, if I choose them well.</p></blockquote><h2 id="clojurecore">clojure.core</h2><p>tbd</p><p>Or structure like this?</p><ul><li>Grokking Simplicity</li><li>Programming Bottom-Up + clojure.core</li><li>Growing a Language
+<ul><li>Especially for the short words point.</li></ul></li></ul><h2 id="notes">Notes</h2><ul><li>Growing a Language is also available on the Archive:
+<a href="https://archive.org/details/GrowingALanguageByGuySteeleAhvzDzKdB0">https://archive.org/details/GrowingALanguageByGuySteeleAhvzDzKdB0</a>
+Or as a transcript:
+<a href="https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf">https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf</a>
+If the links are broken, search and you'll find it elsewhere.</li></ul>
 
     <div id="prev-next">
         
