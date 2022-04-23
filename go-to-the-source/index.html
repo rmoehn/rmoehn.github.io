@@ -81,7 +81,7 @@
         <h2>Go to the source</h2>
     </div>
     
-    <h2 id="situation">Situation</h2><p>You have found a <a href="/suspicious-value">Suspicious value</a> and you wonder how it came about.</p><h2 id="approach">Approach</h2><p>Find the source code of the constructor or initializer of the suspicious value. Set a breakpoint there. Rerun the example. (If the value is a primitive value, it's more difficult to find out where it was generated.)</p><h2 id="example">Example</h2><p>In the Ruby on Rails example from <a href="/spot-the-differences">Spot the differences</a>, you found the <code>NullSession</code> to be suspicious. (It might be called <code>NullSessionHash</code> or similar. I'm lazy to reproduce it now, so stick with <code>NullSession</code>.) In RubyMine, you can open universal search with Shift-Shift, type in <code>NullSession</code> and hit Enter. This will take you to the <code>initialize</code> method, where you set a breakpoint</p><p>When you hit the breakpoint, nose around in the preceding code and the preceding stack frames. You find out that the CSRF token wasn't set. Voilà. Why was it not set? Because you switched from <code>jQuery.ajax</code> to <code>fetch</code> and forgot to adjust to the new tool. When debugging, <a href="/be-suspicious-of-new-tools">Be suspicious of new tools</a>.</p><h2 id="another-example-to-be-written-cleanly">Another example (to be written cleanly)</h2><p>Look around where an exception is raised, using pry-byebug:</p><pre><code>&gt; break ActiveRecord::StatementInvalid#initialize
+    <h2 id="situation">Situation</h2><p>You have found a <a href="/suspicious-value">Suspicious value</a> and you wonder how it came about.</p><h2 id="approach">Approach</h2><p>Find the source code of the constructor or initializer of the suspicious value. Set a breakpoint there. Rerun the example. (If the value is a primitive value, it's more difficult to find out where it was generated.)</p><h2 id="example">Example</h2><p>In the Ruby on Rails example from <a href="/spot-the-differences">Spot the differences</a>, you found the <code>NullSession</code> to be suspicious. (It might be called <code>NullSessionHash</code> or similar. I'm lazy to reproduce it now, so stick with <code>NullSession</code>.) In RubyMine, you can open universal search with Shift-Shift, type in <code>NullSession</code> and hit Enter. This will take you to the <code>initialize</code> method, where you set a breakpoint</p><p>When you hit the breakpoint, nose around in the preceding code and the preceding stack frames. You find out that the CSRF token wasn't set. Voilà. Why was it not set? Because you switched from <code>jQuery.ajax</code> to <code>fetch</code> and forgot to adjust to the new tool. When debugging, <a href="/be-suspicious-of-new-tools">Be suspicious of new tools</a>.</p><h2 id="another-example">Another example</h2><p>(to be written properly)</p><p>Look around where an exception is raised, using pry-byebug:</p><pre><code class="text">&gt; break ActiveRecord::StatementInvalid#initialize
 &gt; continue
 …
 &gt; backtrace
@@ -154,7 +154,7 @@ Somehow not in the case I was debugging.</p>
                     
                     <li><a href="/three-columns-of-code/">Three columns of code</a></li>
                     
-                    <li><a href="/grokking-simplicity/">Read Grokking Simplicity</a></li>
+                    <li><a href="/better-programming/">Get better at programming</a></li>
                     
                     <li><a href="/map-clipboard-contents/">Map clipboard contents</a></li>
                     
@@ -178,6 +178,8 @@ Somehow not in the case I was debugging.</p>
                     <h3>Recent Posts</h3>
                     <ul>
                         
+                        <li><a href="/2022-04-23-better-programming/">Useful and composable: Get better at programming</a></li>
+                        
                         <li><a href="/2022-01-23-leaving-aia/">Useful and composable: I&#39;m leaving AI alignment – you better stay</a></li>
                         
                         <li><a href="/2021-12-31-three-columns-of-code/">Useful and composable: Three columns of code</a></li>
@@ -185,8 +187,6 @@ Somehow not in the case I was debugging.</p>
                         <li><a href="/2021-11-21-disable-github-notification-dot/">Useful and composable: Disable the GitHub notification dot</a></li>
                         
                         <li><a href="/2021-10-22-per-issue-directories/">Useful and composable: Per-issue directories</a></li>
-                        
-                        <li><a href="/2021-08-27-code-self-review/">Useful and composable: Code self-review</a></li>
                         
                     </ul>
                 </div>

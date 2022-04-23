@@ -2,19 +2,26 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Little Pluses: Debugging patterns: Use all the help available</title>
+    <title>Little Pluses: Get better at programming</title>
     
-<meta name="keywords" content="">
 
-<meta name="description" content="See Use all the help available.">
+<meta name="description" content="Many have learned programming to the point where they understand if and for
+and function calls, and can make the computer do what they want. Few know how to
+structure code so that it is easy to work with, over time and at large scale.
+How can you learn to structure code well? For a start, I suggest a book, an
+essay, a collection of functions and a talk, in this order.Grok simplicity">
 
-<meta property="og:description" content="See Use all the help available.">
+<meta property="og:description" content="Many have learned programming to the point where they understand if and for
+and function calls, and can make the computer do what they want. Few know how to
+structure code so that it is easy to work with, over time and at large scale.
+How can you learn to structure code well? For a start, I suggest a book, an
+essay, a collection of functions and a talk, in this order.Grok simplicity">
 
-<meta property="og:url" content="https://www.richardmoehn.com/2021-03-19-use-all-the-help-available/" />
-<meta property="og:title" content="Debugging patterns: Use all the help available" />
+<meta property="og:url" content="https://www.richardmoehn.com/better-programming/" />
+<meta property="og:title" content="Get better at programming" />
 <meta property="og:type" content="article" />
 
-    <link rel="canonical" href="https://www.richardmoehn.com/2021-03-19-use-all-the-help-available/">
+    <link rel="canonical" href="https://www.richardmoehn.com/better-programming/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="//fonts.googleapis.com/css?family=Alegreya:400italic,700italic,400,700" rel="stylesheet"
           type="text/css">
@@ -77,32 +84,68 @@
         <div class="col-lg-9">
             <div id="content">
                 
-<div id="post">
-    <div class="post-header">
-    <div id="post-meta" class="row">
-        <div class="col-lg-6">March 19, 2021</div>
-        
+<div id="custom-page">
+    <div id="page-header">
+        <h2>Get better at programming</h2>
     </div>
-    <h2>Debugging patterns: Use all the help available</h2>
-</div>
-<div>
     
-    <p>See <a href="/use-all-the-help-available">Use all the help available</a>.</p>
-</div>
-
+    <p>Many have learned programming to the point where they understand <code>if</code> and <code>for</code>
+and function calls, and can make the computer do what they want. Few know how to
+structure code so that it is easy to work with, over time and at large scale.
+How can you learn to structure code well? For a start, I suggest a book, an
+essay, a collection of functions and a talk, in this order.</p><h2 id="grok-simplicity">Grok simplicity</h2><p><a href="https://grokkingsimplicity.com/">Grokking Simplicity by Eric Normand</a> teaches
+all the things I wish every programmer knew, but few do (at least judging from
+all the code I've seen so far). Other sources, such as <a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/">The Pragmatic
+Programmer</a>,
+<a href="https://martinfowler.com/books/refactoring.html">Refactoring</a> or TDD try to
+teach these, too, but they don't hit the heart of the matter. Instead they focus
+on lagging metrics like ‘easy to change’, heuristics like function length and
+proxies like testability. Grokking Simplicity hits the heart of the matter.</p><p>It is almost 600 pages long, but those are not the heavy pages of Skiena's
+<a href="https://www.algorist.com/">Algorithm Design Manual</a>. Rather, they are light
+pages with many pictures and repeated examples. And the more advanced you are,
+the faster you can move. It's not the kind of book where you skip one exercise
+and lose track.</p><p>Finally, you can start applying what you learn from this book in any existing
+codebase. No rewrite from scratch required. If you start wondering how, as you
+make your way into the book, I suggest reading the last chapter. It will tell
+you.</p><h2 id="learn-to-grow-a-language">Learn to grow a language</h2><p>Growing a language is a skill that I consider very important and which is taught
+in Grokking Simplicity. But in my experience, two or three more things are
+required to make it stick: Read <a href="http://paulgraham.com/progbot.html">Programming Bottom-Up by Paul
+Graham</a> and, to see many concrete examples,
+explore the <a href="https://clojure.org/api/cheatsheet">Clojure standard library</a>. If
+you have time, watch or read enough of <a href="https://www.youtube.com/watch?v=_ahvzDzKdB0">Growing a Language by Guy Steele
+(YouTube)</a> to get the point. (If
+you have even more time, I recommend you watch or read it all.) I'm lazy to
+argue why these are the things to read/explore/watch. They are short enough to
+speak for themselves, I hope. But I'll leave you with a thought from Growing a
+Language, which might otherwise be overlooked:</p><blockquote><p>I had to take time to think through how to phrase each thought. And there was
+this choice for each new word: is it worth the work to define it, or should I
+just stick with the words I have? Should I do the work of defining a new word
+such as mirror, or should I just say “looking glass” each time I want to speak
+of one? (As an example, I was tempted more than once to state the “ly” rule
+for making new words that change what verbs mean, but in the end I chose to
+cast all such words to one side and make do. And I came that close to defining
+the word without, but each time, for better or for worse, I found some other
+way to phrase my thought.)</p><p>I learned in my youth […] that it is better to choose short words when I can.
+[…] I should try to make my thoughts clear; if they are clear and right, then
+other persons can judge my work as it ought to be judged.</p><p>[…] Short words work well, if I choose them well.</p></blockquote><h2 id="notes">Notes</h2><ul><li>Growing a Language is also available on the Archive:
+<a href="https://archive.org/details/GrowingALanguageByGuySteeleAhvzDzKdB0">https://archive.org/details/GrowingALanguageByGuySteeleAhvzDzKdB0</a>
+Or as a transcript:
+<a href="https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf">https://www.cs.virginia.edu/~evans/cs655/readings/steele.pdf</a>
+If the links are broken, search and you'll find it elsewhere.</li><li>For getting to know the Clojure standard library intimately, I've heard good
+things about <a href="https://www.manning.com/books/clojure-the-essential-reference">Clojure, The Essential Reference by Renzo
+Borgatti</a>.</li></ul>
 
     <div id="prev-next">
         
-        <a href="/2021-07-16-update-git-branch-naming-scheme/">&laquo; Update Git branch naming scheme</a>
+        <a href="/three-columns-of-code/">&laquo; Three columns of code</a>
         
         
-        <a class="right" href="/2021-03-05-git-prevent-master-push/">Useful and composable: Git – Prevent yourself from pushing to master &raquo;</a>
+        ||
+        
+        
+        <a href="/map-clipboard-contents/">Map clipboard contents &raquo;</a>
         
     </div>
-
-    
-
-
 </div>
 
             </div>
