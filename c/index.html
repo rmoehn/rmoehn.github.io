@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Richard's availability</title>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.11",
+          "@fullcalendar/icalendar": "https://cdn.skypack.dev/@fullcalendar/icalendar@6.1.11",
+          "@fullcalendar/timegrid": "https://cdn.skypack.dev/@fullcalendar/timegrid@6.1.11"
+        }
+      }
+    </script>
+
+    <script type="module" src="showcal.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      /* .fc-timegrid .fc-timegrid-slots td {
+        height: 4px !important;
+      } */
+      .fc table {
+        font-size: 11.5px;
+      }
+      .fc-timegrid-event .fc-event-time {
+        font-size: 11.5px;
+      }
+      .fc-timegrid-event .fc-event-main-frame {
+        padding: 1px;
+      }
+      .fc-toolbar {
+        margin-bottom: 12px !important;
+      }
+      .fc .fc-button {
+        font-size: 14px !important;
+      }
+      .fc .fc-toolbar-title {
+        font-size: 16px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="calendar"></div>
+  </body>
+</html>
