@@ -1,3 +1,4 @@
+<!-- autoformatted -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,10 +43,26 @@
       .fc .fc-toolbar-title {
         font-size: 16px !important;
       }
+      dialog {
+        border: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,.15), 0 3px 6px rgba(0,0,0,.10);
+      }
     </style>
   </head>
 
   <body>
     <div id="calendar"></div>
+
+    <dialog id="helpModal">
+      <h2>How this works</h2>
+      <p>
+        light colour = available<br />
+        dark colour = unavailable<br />
+        <br>
+        The calendar is shown in your time zone.<br />
+        So the red line should show your time now.
+      </p>
+      <button id="closeHelpModal">Roger</button>
+    </dialog>
   </body>
 </html>

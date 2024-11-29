@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       url: "newcal.ics",
     },
     headerToolbar: {
-      left: "prev,next today",
+      left: "prev,next today helpButton",
       center: "title",
       right: "",
     },
@@ -36,6 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
     expandRows: true,
     initialView: "timeGridWeek",
     nowIndicator: true,
+    customButtons: {
+      helpButton: {
+        text: "Help! ㉄🙋⁉️🤯🙀🤷 wat",
+        click: function () {
+          document.querySelector("#helpModal").showModal();
+        },
+      },
+    },
   });
   calendar.render();
+
+  document
+    .querySelector("#closeHelpModal")
+    .addEventListener("click", function (e) {
+      document.querySelector("#helpModal").close();
+    });
 });
